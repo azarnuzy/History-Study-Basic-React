@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './App';
-// import StateProps from './1stateProps';
-import Map from './2map';
+// import App from './reactDasar/App';
+// import StateProps from './reactDasar/1stateProps';
+// import Map from './reactDasar/2map';
+// import LifeCycle from './reactDasar/3LifeCycle';
 ReactDOM.render(
-  <React.StrictMode>
-    <Map />
-  </React.StrictMode>,
+  <React.StrictMode></React.StrictMode>,
   document.getElementById('root')
 );
