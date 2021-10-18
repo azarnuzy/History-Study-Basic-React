@@ -81,13 +81,29 @@ export default class Crud extends Component {
     });
   };
 
+  deleteData = (id) => {
+    const newFoods = this.state.foods
+      .filter((food) => food.id !== id)
+      .map((filterfood) => {
+        console.log(filterfood);
+        return filterfood;
+      });
+    this.setState({
+      foods: newFoods,
+    });
+  };
+
   render() {
     console.log(this.state.id);
     return (
       <div>
         <NavbarComponent />
         <div className="container">
-          <Tabel foods={this.state.foods} editData={this.editData} />
+          <Tabel
+            foods={this.state.foods}
+            editData={this.editData}
+            deleteData={this.deleteData}
+          />
           <Formulir
             {...this.state}
             handleChange={this.handleChange}
