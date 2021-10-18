@@ -24,17 +24,39 @@ export default class Crud extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.setState({
-      foods: [
-        ...this.state.foods,
-        {
-          id: this.state.foods.length + 1,
-          nama: this.state.nama,
-          deskripsi: this.state.deskripsi,
-          harga: this.state.harga,
-        },
-      ],
-    });
+
+    if (this.state.id !== '') {
+      const unChoosenFood = this.state.foods
+        .filter((food) => food.id !== this.state.id)
+        .map((filterfood) => {
+          console.log(filterfood);
+          return filterfood;
+        });
+
+      this.setState({
+        foods: [
+          ...unChoosenFood,
+          {
+            id: this.state.foods.length,
+            nama: this.state.nama,
+            deskripsi: this.state.deskripsi,
+            harga: this.state.harga,
+          },
+        ],
+      });
+    } else {
+      this.setState({
+        foods: [
+          ...this.state.foods,
+          {
+            id: this.state.foods.length + 1,
+            nama: this.state.nama,
+            deskripsi: this.state.deskripsi,
+            harga: this.state.harga,
+          },
+        ],
+      });
+    }
 
     this.setState({
       nama: '',
@@ -44,12 +66,28 @@ export default class Crud extends Component {
     });
   };
 
+  editData = (id) => {
+    const choosenFood = this.state.foods
+      .filter((food) => food.id === id)
+      .map((filterfood) => {
+        return filterfood;
+      });
+
+    this.setState({
+      nama: choosenFood[0].nama,
+      deskripsi: choosenFood[0].deskripsi,
+      harga: choosenFood[0].harga,
+      id: choosenFood[0].id,
+    });
+  };
+
   render() {
+    console.log(this.state.id);
     return (
       <div>
         <NavbarComponent />
         <div className="container">
-          <Tabel foods={this.state.foods} />
+          <Tabel foods={this.state.foods} editData={this.editData} />
           <Formulir
             {...this.state}
             handleChange={this.handleChange}
