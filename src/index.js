@@ -6,11 +6,11 @@ import ReactDOM from 'react-dom';
 // import LifeCycle from './reactDasar/3LifeCycle';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Crud from './CRUD';
+import ReactApi from './ReactAPI';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Crud />
+    <ReactApi />
   </React.StrictMode>,
   document.getElementById('root')
 );
