@@ -94,7 +94,6 @@ export default class Crud extends Component {
   };
 
   render() {
-    console.log(this.state.id);
     return (
       <div>
         <NavbarComponent />
