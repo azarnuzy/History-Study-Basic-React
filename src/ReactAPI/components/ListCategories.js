@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { Col, ListGroup } from 'react-bootstrap';
 import axios from 'axios';
-import { API_URL } from './utils/constant';
+import { API_URL } from '../utils/constant';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUtensils,
   faCoffee,
   faCheese,
 } from '@fortawesome/free-solid-svg-icons';
-import './CSS/style.css';
+import '../CSS/style.css';
 
 const Icon = ({ nama }) => {
   if (nama === 'Makanan')

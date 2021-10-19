@@ -185,39 +185,55 @@
   ],
   "keranjangs": [
     {
-      "jumlah": 1,
-      "total_harga": 10000,
+      "jumlah": 6,
+      "total_harga": 42000,
       "product": {
-        "id": 6,
-        "kode": "K-06",
-        "nama": "Bakso",
-        "harga": 10000,
+        "id": 12,
+        "kode": "K-012",
+        "nama": "Es Jeruk",
+        "harga": 7000,
         "is_ready": true,
-        "gambar": "bakso.jpg",
+        "gambar": "es-jeruk.jpg",
         "category": {
-          "id": 1,
-          "nama": "Makanan"
+          "id": 2,
+          "nama": "Minuman"
         }
       },
-      "keterangan": "Bakso Kosongan",
       "id": 1
     },
     {
       "jumlah": 1,
-      "total_harga": 13000,
+      "total_harga": 12000,
       "product": {
-        "id": 5,
-        "kode": "K-05",
-        "nama": "Mie Goreng",
-        "harga": 13000,
+        "id": 3,
+        "kode": "K-03",
+        "nama": "Nasi Rames",
+        "harga": 12000,
         "is_ready": true,
-        "gambar": "mie-goreng.jpg",
+        "gambar": "nasi-rames.jpg",
         "category": {
           "id": 1,
           "nama": "Makanan"
         }
       },
       "id": 2
+    },
+    {
+      "jumlah": 1,
+      "total_harga": 5000,
+      "product": {
+        "id": 8,
+        "kode": "K-08",
+        "nama": "Pangsit 6 pcs",
+        "harga": 5000,
+        "is_ready": true,
+        "gambar": "pangsit.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Cemilan"
+        }
+      },
+      "id": 3
     }
   ],
   "pesanans": [
