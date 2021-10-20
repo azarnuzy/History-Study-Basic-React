@@ -135,7 +135,7 @@ export class Home extends Component {
               changeCategory={this.changeCategory}
               choosenCategory={choosenCategory}
             />
-            <Col>
+            <Col md={{ span: 7 }}>
               <h4>
                 <strong>Daftar Produk</strong>
                 <hr />
@@ -151,7 +151,7 @@ export class Home extends Component {
                   ))}
               </Row>
             </Col>
-            <Hasil keranjangs={keranjangs} />
+            <Hasil keranjangs={keranjangs} {...this.props} />
           </Row>
         </Container>
       </div>

@@ -16,3 +16,7 @@ body {
   background-color: #22668a;
   color: white;
 }
+
+.float-right {
+  float: right;
+}
