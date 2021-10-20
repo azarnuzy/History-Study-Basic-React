@@ -141,7 +141,7 @@ export class Home extends Component {
                 <strong>Daftar Produk</strong>
                 <hr />
               </h4>
-              <Row>
+              <Row className="overflow-auto menu">
                 {menus &&
                   menus.map((menu) => (
                     <Menus

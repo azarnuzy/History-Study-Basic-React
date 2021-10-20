@@ -20,3 +20,25 @@ body {
 .float-right {
   float: right;
 }
+
+.hasil {
+  height: 75vh;
+}
+
+.overflow-auto::-webkit-scrollbar {
+  display: 0 !important;
+}
+
+.overflow-auto {
+  scrollbar-width: none;
+}
+
+.menu {
+  height: 90vh;
+}
+
+@media only screen and (max-height: 1000px) {
+  .menu {
+    height: 800px;
+  }
+}
