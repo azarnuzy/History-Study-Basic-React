@@ -183,42 +183,7 @@
       }
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah": 2,
-      "total_harga": 10000,
-      "product": {
-        "id": 13,
-        "kode": "K-013",
-        "nama": "Es Teh",
-        "harga": 5000,
-        "is_ready": true,
-        "gambar": "es-teh.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Minuman"
-        }
-      },
-      "id": 1
-    },
-    {
-      "jumlah": 1,
-      "total_harga": 7000,
-      "product": {
-        "id": 12,
-        "kode": "K-012",
-        "nama": "Es Jeruk",
-        "harga": 7000,
-        "is_ready": true,
-        "gambar": "es-jeruk.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Minuman"
-        }
-      },
-      "id": 2
-    }
-  ],
+  "keranjangs": [],
   "pesanans": [
     {
       "total_bayar": 86000,
@@ -401,6 +366,86 @@
         }
       ],
       "id": 2
+    },
+    {
+      "total_bayar": 88000,
+      "menus": [
+        {
+          "jumlah": 1,
+          "total_harga": 16000,
+          "product": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Sate Ayam",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "sate-ayam.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "id": 1
+        },
+        {
+          "jumlah": 3,
+          "total_harga": 42000,
+          "product": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "keterangan": "Pedas Semua",
+          "id": 2
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 12000,
+          "product": {
+            "id": 3,
+            "kode": "K-03",
+            "nama": "Nasi Rames",
+            "harga": 12000,
+            "is_ready": true,
+            "gambar": "nasi-rames.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "id": 3
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 18000,
+          "product": {
+            "id": 4,
+            "kode": "K-04",
+            "nama": "Lontong Opor Ayam",
+            "harga": 18000,
+            "is_ready": true,
+            "gambar": "lontong-opor-ayam.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "id": 4
+        }
+      ],
+      "id": 3
+    },
+    {
+      "total_bayar": 0,
+      "menus": [],
+      "id": 4
     }
   ]
 }
