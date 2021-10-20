@@ -34,6 +34,7 @@ export class Home extends Component {
       .get(API_URL + '/keranjangs')
       .then((res) => {
         const keranjangs = res.data;
+        console.log(keranjangs);
         this.setState({ keranjangs });
       })
       .catch((error) => {
