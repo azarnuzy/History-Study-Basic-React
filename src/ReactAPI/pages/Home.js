@@ -30,19 +30,10 @@ export class Home extends Component {
         console.log(error);
       });
 
-    axios
-      .get(API_URL + '/keranjangs')
-      .then((res) => {
-        const keranjangs = res.data;
-        console.log(keranjangs);
-        this.setState({ keranjangs });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    this.getListKeranjangs();
   }
 
-  componentDidUpdate(prevState) {
+  /* componentDidUpdate(prevState) {
     if (this.state.keranjangs !== prevState.keranjangs) {
       axios
         .get(API_URL + '/keranjangs')
@@ -54,7 +45,20 @@ export class Home extends Component {
           console.log('Error yaa ', error);
         });
     }
-  }
+  } */
+
+  getListKeranjangs = () => {
+    axios
+      .get(API_URL + '/keranjangs')
+      .then((res) => {
+        const keranjangs = res.data;
+        console.log(keranjangs);
+        this.setState({ keranjangs });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   changeCategory = (value) => {
     this.setState({
@@ -87,6 +91,7 @@ export class Home extends Component {
           axios
             .post(API_URL + '/keranjangs', keranjang)
             .then((res) => {
+              this.getListKeranjangs();
               swal({
                 title: 'Success!',
                 text: keranjang.product.nama + ' Masuk Keranjang',
@@ -152,7 +157,11 @@ export class Home extends Component {
                   ))}
               </Row>
             </Col>
-            <Hasil keranjangs={keranjangs} {...this.props} />
+            <Hasil
+              keranjangs={keranjangs}
+              {...this.props}
+              getListKeranjangs={this.getListKeranjangs}
+            />
           </Row>
         </Container>
       </div>
